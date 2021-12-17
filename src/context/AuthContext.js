@@ -8,15 +8,15 @@ const authReducer = (state, action) => {
   }
 };
 
-const signup = (dispatchc) => {
+const signup = (dispatch) => {
   return ({ email, password }) => {};
 };
 
-const signin = (dispatchc) => {
+const signin = (dispatch) => {
   return ({ email, password }) => {};
 };
 
-const signout = (dispatchc) => {
+const signout = (dispatch) => {
   return () => {};
 };
 
