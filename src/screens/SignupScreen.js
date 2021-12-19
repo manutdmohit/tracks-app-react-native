@@ -1,14 +1,13 @@
 import React, { useState, useContext } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { Text, Input, Button } from 'react-native-elements';
 import Spacer from '../components/Spacer';
 import { Context as AuthContext } from '../context/AuthContext';
 
 const SignupScreen = ({ navigation }) => {
+  const { state, signup } = useContext(AuthContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  const { state, signup } = useContext(AuthContext);
 
   return (
     <View style={styles.container}>
@@ -34,29 +33,30 @@ const SignupScreen = ({ navigation }) => {
       {state.errorMessage ? (
         <Text style={styles.errorMessage}>{state.errorMessage}</Text>
       ) : null}
-
-      <Button title="Sign Up" onPress={() => signup({ email, password })} />
+      <Spacer>
+        <Button title="Sign Up" onPress={() => signup({ email, password })} />
+      </Spacer>
     </View>
   );
 };
 
 SignupScreen.navigationOptions = () => {
   return {
-    headerShown: false,
+    header: () => false,
   };
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    marginBottom: 200,
+    // flex: 1,
+    // justifyContent: 'center',
+    marginTop: 80,
   },
   errorMessage: {
     fontSize: 16,
     color: 'red',
-    marginLeft: 10,
-    marginBottom: 10,
+    marginLeft: 15,
+    marginTop: 15,
   },
 });
 
