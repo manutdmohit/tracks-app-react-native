@@ -1,7 +1,6 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
-import { Text, Input, Button } from 'react-native-elements';
-import Spacer from '../components/Spacer';
+import { Text } from 'react-native-elements';
 import { Context as AuthContext } from '../context/AuthContext';
 import AuthForm from '../components/AuthForm';
 
@@ -39,12 +38,7 @@ const styles = StyleSheet.create({
   btn: {
     marginHorizontal: 10,
   },
-  errorMessage: {
-    fontSize: 16,
-    color: 'red',
-    marginLeft: 15,
-    marginTop: 15,
-  },
+
   link: {
     color: 'blue',
     fontSize: 18,
