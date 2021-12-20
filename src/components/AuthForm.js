@@ -51,6 +51,9 @@ const styles = StyleSheet.create({
     marginLeft: 15,
     marginTop: 15,
   },
+  btn: {
+    marginHorizontal: 10,
+  },
 });
 
 export default AuthForm;
