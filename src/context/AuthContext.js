@@ -25,7 +25,7 @@ const signup = (dispatch) => {
     } catch (error) {
       dispatch({
         type: 'add_error',
-        payload: error.response.data,
+        payload: 'Something went wrong with signup',
       });
     }
   };
