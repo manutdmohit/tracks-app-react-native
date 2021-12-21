@@ -28,6 +28,7 @@ const AuthForm = ({ headerText, errorMessage, onSubmit, submitButtonText }) => {
         autoCapitalize="none"
         autoCorrect={false}
       />
+
       {errorMessage ? (
         <Text style={styles.errorMessage}>{errorMessage}</Text>
       ) : null}
@@ -38,18 +39,17 @@ const AuthForm = ({ headerText, errorMessage, onSubmit, submitButtonText }) => {
           onPress={() => onSubmit({ email, password })}
         />
       </View>
-
-      <Spacer />
     </>
   );
 };
 
 const styles = StyleSheet.create({
   errorMessage: {
-    fontSize: 16,
+    fontSize: 18,
     color: 'red',
-    marginLeft: 15,
-    marginTop: 15,
+    marginLeft: 10,
+    marginBottom: 10,
+    textAlign: 'center',
   },
   btn: {
     marginHorizontal: 10,
