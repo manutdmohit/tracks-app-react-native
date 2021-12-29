@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "tracks",
+    "name": "Tracks",
     "slug": "tracks",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "An app built to track users' location. For example, This app can be used for travelling as it records the locations of the user from a starting point to an endpoint as per the user's request.  The record can be saved and stored in the database. ",
+    "githubUrl": "https://github.com/manutdmohit/tracks-app-react-native"
   }
 }

@@ -9,7 +9,7 @@ const TrackListScreen = ({ navigation }) => {
   const { state, fetchTracks } = useContext(TrackContext);
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <NavigationEvents onWillFocus={fetchTracks} />
 
       <Text style={{ fontSize: 30, textAlign: 'center', marginTop: 10 }}>
@@ -17,6 +17,7 @@ const TrackListScreen = ({ navigation }) => {
       </Text>
 
       <FlatList
+        showsVerticalScrollIndicator={false}
         data={state}
         keyExtractor={(item) => item._id}
         renderItem={({ item }) => {
