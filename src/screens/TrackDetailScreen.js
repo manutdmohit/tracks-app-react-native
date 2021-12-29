@@ -33,6 +33,10 @@ const TrackDetailScreen = ({ navigation }) => {
   );
 };
 
+TrackDetailScreen.navigationOptions = {
+  title: 'Track Detail',
+};
+
 export default TrackDetailScreen;
 
 const styles = StyleSheet.create({
